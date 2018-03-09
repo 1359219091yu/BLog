@@ -17,6 +17,16 @@ router.post('/add', auth, upload.single('img'), article.save);
 router.post('/update/:id', article.update);
 
 //删除文章
-router.get('/delete/:id', article.del);
+router.post('/delete/:id', article.delete);
+
+/**
+ * 文章保存
+ */
+router.post('/save', article.save);
+
+/**
+ * 删除文章
+ */
+// router.post('/delete/:id',article.delete)
 
 module.exports = router;

@@ -6,7 +6,9 @@
 */
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const ObjectId = Schema.Types.ObjectId;
+/**
+ * 分类模型
+ */
 const CategorySchema = new Schema({
     name:{
         type:String,
@@ -16,13 +18,17 @@ const CategorySchema = new Schema({
         type:String,
         default:''
     },
-    template:{
-        type:String,
-        default:''
-    },
     sort:{
         type:Number,
         default:0
+    },
+    pid:{
+        type:Schema.Types.ObjectId,
+        ref:'Category'
+    },
+    template:{
+        type:String,
+        default:''
     },
     is_sys:{
         type:Number,

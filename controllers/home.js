@@ -1,5 +1,6 @@
 const ArticleModel = require('../models/article');
 const CategoryModel = require("../models/category");
+const UserModel=require("../models/user");
 const Home = {
     /**
      * 首页
